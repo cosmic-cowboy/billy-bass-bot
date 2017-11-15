@@ -1,0 +1,118 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <!-- ================================================================ -->
+  <!--     general information                                          -->
+  <!-- ================================================================ -->
+  <groupId>com.linecorp.talking.bot</groupId>
+  <artifactId>talking-bot</artifactId>
+  <packaging>jar</packaging>
+  <version>1.0-SNAPSHOT</version>
+  <name>talking-bot</name>
+  <properties>
+    <java.version>1.8</java.version>
+    <retrofit2.groupId>com.squareup.retrofit2</retrofit2.groupId>
+    <retrofit2.version>2.2.0</retrofit2.version>
+  </properties>
+
+  <!-- ================================================================ -->
+  <!--      common settings                                             -->
+  <!-- ================================================================ -->
+  <parent>
+    <!-- use license 'The Apache License, Version 2.0' -->
+    <!-- https://github.com/spring-projects/spring-boot/blob/master/LICENSE.txt -->
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-parent</artifactId>
+    <version>1.5.6.RELEASE</version>
+  </parent>
+
+  <!-- ================================================================ -->
+  <!--     dependency                                                   -->
+  <!-- ================================================================ -->
+  <dependencies>
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-web</artifactId>
+    </dependency>
+
+    <!--  Spring Boot Redis -->
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-websocket</artifactId>
+    </dependency>
+
+    <!--  Spring Boot Redis -->
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-data-redis</artifactId>
+    </dependency>
+
+    <!-- template engine -->
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-thymeleaf</artifactId>
+    </dependency>
+
+
+    <!-- http client -->
+    <!-- use license 'The Apache License, Version 2.0' -->
+    <!-- https://github.com/square/retrofit/blob/master/LICENSE.txt -->
+    <dependency>
+      <groupId>${retrofit2.groupId}</groupId>
+      <artifactId>retrofit</artifactId>
+      <version>${retrofit2.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>${retrofit2.groupId}</groupId>
+      <artifactId>converter-gson</artifactId>
+      <version>${retrofit2.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>com.squareup.okhttp3</groupId>
+      <artifactId>logging-interceptor</artifactId>
+      <version>3.6.0</version>
+    </dependency>
+
+    <!-- use license 'The Apache License, Version 2.0' -->
+    <!-- https://github.com/google/gson/blob/master/LICENSE -->
+    <dependency>
+      <groupId>com.google.code.gson</groupId>
+      <artifactId>gson</artifactId>
+    </dependency>
+    <!-- utility -->
+    <!-- use license 'The Apache License, Version 2.0' -->
+    <!-- https://github.com/google/guava/blob/master/COPYING -->
+    <dependency>
+      <groupId>com.google.guava</groupId>
+      <artifactId>guava</artifactId>
+      <version>19.0</version>
+    </dependency>
+    <!-- use license 'The Apache License, Version 2.0' -->
+    <!-- https://github.com/ReactiveX/RxJava/blob/1.x/LICENSE -->
+    <dependency>
+      <groupId>io.reactivex</groupId>
+      <artifactId>rxjava</artifactId>
+      <version>1.2.0</version>
+    </dependency>
+    
+    <dependency>
+      <groupId>io.searchbox</groupId>
+      <artifactId>jest</artifactId>
+      </dependency>
+  </dependencies>
+
+  <!-- ================================================================ -->
+  <!--     plugin settings                                               -->
+  <!-- ================================================================ -->
+  <build>
+    <finalName>${project.artifactId}</finalName>
+    <plugins>
+      <plugin>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-maven-plugin</artifactId>
+      </plugin>
+    </plugins>
+  </build>
+
+</project>
