@@ -86,7 +86,7 @@
     <dependency>
       <groupId>com.google.guava</groupId>
       <artifactId>guava</artifactId>
-      <version>19.0</version>
+      <version>[30.0-jre,)</version>
     </dependency>
     <!-- use license 'The Apache License, Version 2.0' -->
     <!-- https://github.com/ReactiveX/RxJava/blob/1.x/LICENSE -->
